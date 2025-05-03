@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsh Yadav | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      background: #0a192f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: #0a192f;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #38bdf8;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ccd6f6;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 1rem;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    .about-section {
+      background: linear-gradient(135deg, #1e2a47, #12304c);
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #38bdf8;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .bio {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #ccd6f6;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease-in-out;
+      min-height: 140px;
+    }
+
+    .bio:hover {
+      transform: scale(1.02);
+    }
+
+    .skills-section {
+      background: linear-gradient(135deg, #1e2a47, #0a192f);
+      padding: 2rem 0;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .skill {
+      background: #1a2a46;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      color: #38bdf8;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .skill:hover {
+      background: #233554;
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, #1e2a47, #12304c);
+      padding: 2rem 0;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact a {
+      color: #f6c7c7;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #8892b0;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head><body>
+  <header>
+    <h1>Harsh Yadav</h1>
+    <p>Aspiring Developer | Lifelong Learner with a Passion for Technology</p>
+  </header>
+  <section class="about-section">
+    <h2 class="section-title">About Me</h2>
+    <p class="bio" id="bio"></p>
+  </section>
+  <section class="skills-section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">C</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+    </div>
+  </section>
+  <section class="contact-section">
+    <h2 class="section-title">Contact</h2>
+    <p>Feel free to reach out: <a href="mailto:harshyadav2034@gmail.com">harshyadav2034@gmail.com</a></p>
+  </section>
+  <footer>
+    &copy; 2025 Harsh Yadav. All rights reserved.
+  </footer>
+  <script>
+    const bioText = "I’m Harsh Yadav, a curious and motivated individual with a growing passion for coding and technology. I enjoy exploring how things work under the hood, and I'm always eager to learn new programming concepts. While I’m still early in my journey, my dedication and enthusiasm for building solutions keep me moving forward every day.";
+    const bioElement = document.getElementById("bio");
+    let i = 0;
+
+    function typeText() {
+      if (i < bioText.length) {
+        bioElement.innerHTML += bioText.charAt(i);
+        i++;
+        setTimeout(typeText, 30);
+      }
+    }
+
+    window.onload = typeText;
+  </script>
+</body></html>
